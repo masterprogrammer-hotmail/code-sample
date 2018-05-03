@@ -1,0 +1,103 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<ion-title>Signup</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="login-page">
+
+	<div class="logo">
+			<!-- <img src="{{email}}"> -->
+		<!-- <img src="http://www.gravatar.com/avatar?d=mm&s=140" alt="avatar" height="140px" width="140px"> -->
+		<ion-img src="https://www.gravatar.com/avatar{{ emailHash != undefined ? emailHash : gravatar_default }}?s=140" [width]="imgWidth" [height]="imgHeight"></ion-img>
+		<!-- <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50" height="80px" width="80px"/> -->
+	</div>
+<br />
+	<form #signupForm="ngForm" novalidate>
+			<!-- <button ion-button (click)="testPost2()" type="button" block>Test</button> -->
+		<ion-list no-lines>
+			<!-- <ion-item>
+				<ion-label floating color="primary">Username</ion-label>
+				<ion-input [(ngModel)]="signup.username" name="username" type="text" #username="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
+				Username is required
+			</p> -->
+
+			<!-- <ion-item>
+				<ion-label floating color="primary">Password</ion-label>
+				<ion-input [(ngModel)]="signup.password" name="password" type="password" #password="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
+				Password is required
+			</p> -->
+			
+			<ion-item>
+				<ion-label floating color="primary">Email</ion-label>
+				<ion-input [(ngModel)]="signupData.email" name="EMAIL" type="text" #email="ngModel" clearInput required maxlength="60" (ionBlur)="onBlur($event)" text-transform: lowercase>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="email.valid || submitted == false" color="danger" padding-left>
+				Email is required
+			</p>
+
+			<ion-item>
+				<ion-label floating color="primary">First Name</ion-label>
+				<ion-input [(ngModel)]="signupData.fname" name="FNAME" type="text" #fname="ngModel" clearInput required maxlength="20" text-transform: capitalize>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="fname.valid || submitted == false" color="danger" padding-left>
+				First Name is required
+			</p>
+
+			<ion-item>
+				<ion-label floating color="primary">Last Name</ion-label>
+				<ion-input [(ngModel)]="signupData.lname" name="LNAME" type="text" #lname="ngModel" clearInput required maxlength="20" text-transform: capitalize>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="lname.valid || submitted == false" color="danger" padding-left>
+				Last Name is required
+			</p>
+
+			<ion-item>
+				<ion-label floating color="primary">Phone</ion-label>
+				<ion-input [(ngModel)]="signupData.phone" name="PHONE" type="text" #phone="ngModel" clearInput required minlength="10" maxlength="20">
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="phone.valid || submitted == false" color="danger" padding-left>
+				Phone is required
+			</p>
+
+		</ion-list>
+
+		
+
+			<ion-card>
+				<!-- <ion-card-header>
+					Test
+				</ion-card-header> -->
+		
+				<ion-list inset *ngIf="emailHash">
+					<!-- <button ion-item (click)="doiabOpen('http://www.myvalentus.com/melt/')"> -->
+					<!-- <button ion-item (click)="doiabOpenTest('assets/docs/test.html')">
+					<ion-icon name="medical" item-start></ion-icon>
+					Test
+					</button> -->
+				<p>If you have a profile or are registered at Gravatar.com we will get your Gravatar and associate it once you enter your email address.<br /><br />To set up a Gravatar, go to www.gravatar.com</p>
+					</ion-list>
+		
+				</ion-card>
+
+		<div padding>
+			<!-- <button ion-button (click)="onSignup(signupForm)" type="submit" block>Create</button> -->
+			<button ion-button (click)="onSignup(signupForm)" type="submit" block>Create</button>
+		</div>
+
+	</form>
+
+</ion-content>

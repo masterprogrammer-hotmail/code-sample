@@ -1,0 +1,57 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<ion-title>Page Template</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="template-page">
+
+		<ion-card>
+				<!-- <ion-card-header>
+				  Test
+				</ion-card-header> -->
+		
+				<ion-list inset>
+				  <!-- <button ion-item (click)="doiabOpen('http://www.myvalentus.com/melt/')"> -->
+				  <!-- <button ion-item (click)="doiabOpenTest('assets/docs/test.html')">
+					<ion-icon name="medical" item-start></ion-icon>
+					Test
+				  </button> -->
+				  <p>
+						Now is the time for all good men to come to the aid of their country.
+					</p>
+				</ion-list>
+		
+			  </ion-card>
+	
+
+	<form #signupForm="ngForm" novalidate>
+		<!-- <ion-list no-lines>
+			<ion-item>
+				<ion-label floating color="primary">Username</ion-label>
+				<ion-input [(ngModel)]="signup.username" name="username" type="text" #username="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
+				Username is required
+			</p>
+
+			<ion-item>
+				<ion-label floating color="primary">Password</ion-label>
+				<ion-input [(ngModel)]="signup.password" name="password" type="password" #password="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
+				Password is required
+			</p>
+		</ion-list> -->
+
+		<div padding>
+			<button ion-button (click)="onSubmit(signupForm)" type="submit" block>Create</button>
+		</div>
+	</form>
+
+</ion-content>

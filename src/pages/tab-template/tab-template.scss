@@ -1,0 +1,44 @@
+.pinfo-header {
+  background-color: #434954;
+  padding: 16px;
+  width: 100%;
+  min-height: 150px;
+  text-align: center;
+}
+
+.pinfo-header img {
+  max-width: 200px;
+  min-height: 115px;
+  margin-left: -15px;
+  padding: 25px 0 20px 0;
+}
+
+.pinfo-info div {
+  color: #697072;
+  text-align: left;
+}
+
+.pinfo-info ion-icon {
+  color: color($colors, primary);
+  width: 20px;
+}
+
+.md,
+.wp {
+  .pinfo-info [text-right] {
+    margin-right: 0;
+  }
+}
+
+.ios .pinfo-info {
+  text-align: center;
+}
+
+.ios .pinfo-info ion-icon {
+  width: auto;
+  margin-right: 10px;
+}
+
+
+// @include filter-gradient(#a6000000, #00000000, vertical); // IE6-9
+// @include background-image(linear-gradient(top, rgba(0,0,0,0.65) 32%,rgba(0,0,0,0) 100%));

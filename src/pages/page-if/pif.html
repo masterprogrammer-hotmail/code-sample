@@ -1,0 +1,52 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<ion-title></ion-title>
+	</ion-navbar>
+</ion-header>
+
+	<ion-content class="outer-content">
+		<ion-list *ngIf="_items.count >= 1">
+			<ion-list-header>
+			I/F New Providers
+			</ion-list-header>
+		
+		
+			<ion-item-sliding *ngFor="let item of this._items">
+			<ion-item (click)="this.itemSelected(item)">
+				<ion-avatar item-start>
+				
+				</ion-avatar>
+				<h2>ID:{{item.OrgID}} - {{item.OrgName}}</h2>
+				{{item.OrgOfficialName}}
+					<p>{{item.LocAddress1}}</p>
+					<p>{{item.LocAddress2}}</p>
+					<p>{{item.OrgCSZ}}</p>
+			</ion-item>
+			<ion-item-options>
+				<button ion-button color="light" icon-start>
+				<ion-icon name="ios-more"></ion-icon>
+				More
+				</button>
+				<button ion-button color="primary" icon-start>
+				<ion-icon name="text"></ion-icon>
+				Text
+				</button>
+				<button ion-button color="secondary" icon-start>
+				<ion-icon name="call"></ion-icon>
+				Call
+				</button>
+			</ion-item-options>
+			</ion-item-sliding>
+			
+		
+		</ion-list>
+
+		<ion-list *ngIf="!_items">
+			<ion-item>
+					<p>No Items.</p>
+			</ion-item>
+		</ion-list>
+	  </ion-content>

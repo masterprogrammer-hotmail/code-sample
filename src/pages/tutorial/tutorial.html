@@ -1,0 +1,57 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-buttons end *ngIf="showSkip">
+      <button ion-button (click)="startApp()" color="primary">Skip</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-1.png" class="slide-image"/>
+      <h2 class="slide-title">
+        Welcome to <b>Injury Finance</b>
+      </h2>
+      <p>
+        The <b>Injury Finance</b> app is a production quality release of the Production Blocks Framework underpinned by the dynamic duo -  Ionic and Angular. Production Blocks is backed by the leaders in the mobile cloud space.  It is a showcase of talent across the entire Application Lifecycle Management not just a specific stack under development in the Software Development Life Cycle.
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-2.png" class="slide-image"/>
+      <h2 class="slide-title">What is Ionic?</h2>
+      <p><b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like Angular, RxJS, HTML5, CSS3, and TypeScript.</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-3.png" class="slide-image"/>
+      <h2 class="slide-title">What is Ionic Pro?</h2>
+      <p><b>Ionic Pro</b> is a powerful set of services and features built on top of Ionic Framework that brings a totally new level of app development agility to mobile dev teams.</p>
+      <p>This app has been developed using the latest versions of Ionic and Angular and takes advantage of the time saving features of Ionic Pro.</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image"/>
+      <h2 class="slide-title">Everything together, all in one place.</h2>
+      <p>We use and have integrated the latest cloud technologies from the leaders in the mobile services space.  Some of our vendors that excel in their free-tier products are Amazon, Google, Microsoft and Auth0; and we're just getting started!</p>
+      <button ion-button icon-end large clear (click)="startApp()">
+        Continue
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+
+    <!-- <ion-slide>
+      <img src="assets/img/ica-slidebox-img-5.png" class="slide-image"/>
+      <h2 class="slide-title">Thank You!</h2>
+      <p>A big thank you to the leaders in the cloud and mobile spaces!</p><br />
+      <p>Without them, this could not be possible.</p>
+      <button ion-button icon-end large clear (click)="startApp()">
+        Continue
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide> -->
+
+  </ion-slides>
+</ion-content>

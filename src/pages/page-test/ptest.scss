@@ -1,0 +1,27 @@
+// body {
+//   background: linear-gradient(red, yellow); /* Standard syntax */
+// }
+
+//body {
+  //   background: linear-gradient(red, yellow); /* Standard syntax */
+  // }
+
+
+// @include filter-gradient(#4c4c4c, #131313, vertical); // IE6-9
+// @include background-image(linear-gradient(top, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%));
+
+// @include filter-gradient(#a6000000, #00000000, vertical); // IE6-9
+// @include background-image(linear-gradient(top, rgba(0,0,0,0.65) 32%,rgba(0,0,0,0) 100%));
+
+//body { background-color:#333; }
+page-test {
+ion-card-header.card-header {
+  background-color:#555453;
+  color: orange;
+}
+}
+
+page-test {
+.scroll-content {
+  background: #EDEDED;
+}}
